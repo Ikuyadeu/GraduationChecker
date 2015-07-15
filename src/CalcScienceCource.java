@@ -1,5 +1,5 @@
 
-public class CalcScienceCource extends CalcGraduation {
+public class CalcScienceCource extends CalcGraduation {//工学コースの判定
 
 	@Override
 	int calcNeedCredit(Person p) {

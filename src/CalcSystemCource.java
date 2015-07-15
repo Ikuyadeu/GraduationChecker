@@ -1,5 +1,5 @@
 
-public class CalcSystemCource extends CalcGraduation {
+public class CalcSystemCource extends CalcGraduation {//システムコースの判定
 
 	@Override
 	int calcNeedCredit(Person p) {
