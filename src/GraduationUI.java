@@ -6,12 +6,12 @@ import java.io.*;//パッケージのクラスを使うことを宣言する
 
 public class GraduationUI {
 	/*
-	 * 標準入力からfloat型のデータを得る。入力がなかったり、数値として正しい値でなかった場合は0.0Fを返す
+	 * 標準入力からint型のデータを得る。入力がなかったり、数値として正しい値でなかった場合は0.0Fを返す
 	 * @param str 何を入力するかを示すメッセージ
-	 * @return float型の実数
+	 * @return int型の実数
 	 */
-	public float getValue(String str) {
-		float f;
+	public int getValue(String str) {
+		int f;
 
 		// キーボードから入力するため、標準入力をつかう準備をする
 		InputStreamReader rin = new InputStreamReader(System.in);
@@ -26,28 +26,28 @@ public class GraduationUI {
 			String line = dis.readLine();
 
 			// 入力した値をfloat型の実数（浮動小数点）に変換する
-			f = Float.valueOf(line).floatValue();
+			f = Float.valueOf(line).intValue();
 		}
 
 		catch (NumberFormatException e) {
-			f = 0.0F;
+			f = 0;
 		} catch (IOException e) {
-			f = 0.0F;
+			f = 0;
 		}
 
 		return f;
 	}
 
 	/*
-	 * 標準体重を画面に表示する
-	 * @param w 標準体重
+	 * 必要単位数を画面に表示する
+	 * @param w 単位数
 	 */
-	public void printStdWeight(float w) {
-		System.out.println("標準体重は" + w + "kg");
+	public void printStdWeight(int w) {
+		System.out.println("必要単位数は" + w + "単位");
 	}
 
 	/*
-	 * 肥満度判定を画面に表示する
+	 * 研究着手可能判定を画面に表示する
 	 * @param j 判定結果
 	 */
 	public void printJudge(String j) {
