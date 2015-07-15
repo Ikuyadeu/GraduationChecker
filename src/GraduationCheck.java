@@ -1,10 +1,10 @@
 import java.awt.HeadlessException;
 
-public class HealthCheck2 {
+public class GraduationCheck {
 	
 	private Person p;
-	private CalcHiman calc;
-	private HealthUI ui;
+	private CalcGraduation calc;
+	private GraduationUI ui;
 
 
 	public void doInit(String method) {

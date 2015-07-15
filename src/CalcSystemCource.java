@@ -1,5 +1,5 @@
 
-public class CalcBMI extends CalcHiman {
+public class CalcSystemCource extends CalcGraduation {
 
 	@Override
 	float calcStdWeight(Person p) {

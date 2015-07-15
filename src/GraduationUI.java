@@ -4,7 +4,7 @@ import java.io.*;//パッケージのクラスを使うことを宣言する
  * キーボードから入力を得て、結果を画面に出力する役割を担うクラス
  */
 
-public class HealthUI {
+public class GraduationUI {
 	/*
 	 * 標準入力からfloat型のデータを得る。入力がなかったり、数値として正しい値でなかった場合は0.0Fを返す
 	 * @param str 何を入力するかを示すメッセージ
