@@ -106,7 +106,7 @@ public class Person {
 	 * インスタンスの肥満度判定の結果を設定する
 	 * @param judge 肥満度判定の結果
 	 */
-	public void SetJudge(String judge)
+	public void setJudge(String judge)
 	{
 		this.judge = judge;
 	}

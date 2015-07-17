@@ -38,16 +38,11 @@
 		      p.setSpecialltyBasic(ui.getValue("専門基礎の単位を入力してください: "));
 		      p.setSpecialltyEducation(ui.getValue("専門教育の単位を入力してください: "));
 		      p.setCompulsory(ui.getValue("専門必修の単位を入力してください: "));
-		      
-		      //標準体重の計算と設定
-		      p.setStdWeight(calcNeedCredit());
+
 		      
 		      //卒業研究着手可能かの判定と設定
 		      p.setJudge(judgeGraduation());
-		      
-		      //標準体重の表示
-		      ui.printStdWeight(p.getStdWeight());
-		      
+
 		      //判定結果の表示
 		      ui.printJudge(p.getJudge());
 		    }
