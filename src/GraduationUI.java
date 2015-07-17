@@ -19,7 +19,7 @@ public class GraduationUI {
 
 		// 引数で渡された文字列を使って入力を求めるメッセージを標準出力に表示する
 		System.out.println(str);
-		System.out.flush();
+		System.out.flush(); 
 
 		try {
 			// 標準入力を１行読む
