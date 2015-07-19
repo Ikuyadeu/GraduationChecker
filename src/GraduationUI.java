@@ -42,7 +42,7 @@ public class GraduationUI {
 	 * 必要単位数を画面に表示する
 	 * @param w 単位数
 	 */
-	public void printStdWeight(int w) {
+	public void printNeedCredit(int w) {
 		System.out.println("必要単位数は" + w + "単位");
 	}
 

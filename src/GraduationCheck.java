@@ -42,16 +42,17 @@
 		      
 		      //卒業研究着手可能かの判定と設定
 		      p.setJudge(judgeGraduation());
-
+		      
+		      ui.printNeedCredit(calcNeedCredit());
 		      //判定結果の表示
 		      ui.printJudge(p.getJudge());
 		    }
 			
 		    /**
-		     * 標準体重の計算を行う
-		     * @return 標準体重
+		     * 必要単位の計算を行う
+		     * @return 必要単位数
 			 */
-		    private float calcNeedCredit()
+		    private int calcNeedCredit()
 		    {
 		      return calc.calcNeedCredit(p);	
 		    }

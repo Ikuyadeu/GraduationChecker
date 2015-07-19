@@ -21,46 +21,46 @@ public class Person {
 	private String judge;
 	
 	/**
-	 * インスタンスの体重の値を得る
-	 * @return 体重
+	 * 基礎科目の単位数を得る
+	 * @return 単位数
 	 */
 	public int getBasic(){
 		return this.basic;
 	}
 	
 	/**
-	 * インスタンスの身長の値を得る
-	 * @return 身長
+	 * 教養教育科目の単位数を得る
+	 * @return 単位数
 	 */
 	public int getLiberal(){
 		return this.liberal;
 	}
 	/**
-	 * インスタンスの身長の値を得る
-	 * @return 身長
+	 * 専門基礎科目の単位数を得る
+	 * @return 単位数
 	 */
 	public int getSpecialltyBasic(){
 		return this.specialltyBasic;
 	}
 	/**
-	 * インスタンスの身長の値を得る
-	 * @return 身長
+	 * 専門教育科目の単位数を得る
+	 * @return 単位数
 	 */
 	public int getSpecialltyEducation(){
 		return this.specialltyEducation;
 	}
 
 	/**
-	 * インスタンスの標準体重の値を得る
-	 * @return 標準体重
+	  * 専門必修科目の単位数を得る
+	 * @return 単位数
 	 */
 	public int getCompulsory(){
 		return this.compulsory;
 	}
 	
 	/**
-	 * インスタンスの肥満度判定の結果を得る
-	 * @return 肥満度判定の結果
+	 * 卒業研究着手判定の結果を得る
+	 * @return 着手判定の結果
 	 */
 	public String getJudge(){
 	return this.judge;
