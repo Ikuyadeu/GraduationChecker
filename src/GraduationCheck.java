@@ -43,8 +43,8 @@
 		      //卒業研究着手可能かの判定と設定
 		      p.setJudge(judgeGraduation());
 		      
-		      ui.printNeedCredit(calcNeedCredit());
-		      //判定結果の表示
+		      ui.printNeedCredit(calcNeedSum(),calcNeedBasic(),calcNeedSpeciallty());
+		      //判定結果の表示calcNeedSum(p)
 		      ui.printJudge(p.getJudge());
 		    }
 			
@@ -52,10 +52,19 @@
 		     * 必要単位の計算を行う
 		     * @return 必要単位数
 			 */
-		    private int calcNeedCredit()
-		    {
-		      return calc.calcNeedCredit(p);	
-		    }
+		    private int calcNeedSum() {
+		    	return calc.calcNeedSum();	
+			}
+
+		    private int calcNeedBasic() {
+		    	return calc.calcNeedBasic();	
+			}
+
+		    private int calcNeedSpeciallty() {
+		    	return calc.calcNeedSpeciallty();	
+			}
+		    
+		    
 			
 		    /**
 		     * 肥満度の判定をする
@@ -69,10 +78,10 @@
 		    /**
 		     * アプリケーションを起動すると実行される。
 		     * 実行方法:
-		     * java HealthCheck2 Broker
+		     * java GraduationCheck SystemCource
 			 * または
-			 * java HealthCheck2 BMI
-		     * @param args 起動時に文字列の配列として渡される引数。計算方法（BMIまたはBroker）を指定する。
+			 * java GraduationCheck ScienceCource
+		     * @param args 起動時に文字列の配列として渡される引数。計算方法（システムコースまたは工学コース）を指定する。
 		     */
 		    public static void main(String args[])
 		    {

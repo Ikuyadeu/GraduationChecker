@@ -1,17 +1,27 @@
 
-public class CalcScienceCource extends CalcGraduation {//工学コースの判定
+public class CalcScienceCource extends CalcGraduation {
 
 	@Override
-	int calcNeedCredit(Person p) {
-		// TODO Auto-generated method stub
-		return 0;
+	int calcNeedSum() {
+		return 100;
+	}
+
+	@Override
+	int calcNeedBasic() {
+		return 44;
+	}
+
+	@Override
+	int calcNeedSpeciallty() {
+		return 12;
 	}
 
 	@Override
 	String judgeGraduation(Person p) {
-		// TODO Auto-generated method stub
 		return null;
-	}
+	}//工学コースの判定
+
+
 
 
 }

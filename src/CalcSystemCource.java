@@ -1,17 +1,27 @@
 
-public class CalcSystemCource extends CalcGraduation {//システムコースの判定
+public class CalcSystemCource extends CalcGraduation {
 
 	@Override
-	int calcNeedCredit(Person p) {
-		// TODO Auto-generated method stub
-		return 0;
+	int calcNeedSum() {
+		return 100;
+	}
+
+	@Override
+	int calcNeedBasic() {
+		return 44;
+	}
+
+	@Override
+	int calcNeedSpeciallty() {
+		return 39;
 	}
 
 	@Override
 	String judgeGraduation(Person p) {
-		// TODO Auto-generated method stub
+		// TODO 自動生成されたメソッド・スタブ
 		return null;
-	}
+	}//システムコースの判定
 
+	
 	
 }
