@@ -7,7 +7,7 @@
 			
 			/**
 			 * 実際の仕事を担う3つのクラスのインスタンスを作り、変数を代入する
-			 * @param method　肥満度の計算方法の名称
+			 * @param method　必要単位の計算方法の名称
 			 */
 			private void doInit(String method)
 			{
@@ -24,11 +24,11 @@
 		    	  e.printStackTrace();
 		      }
 		      
-		      ui=new GraduationUI(); //HalthUIクラスのインスタンスを作り、インスタンス変数uiに代入する
+		      ui=new GraduationUI(); //GraduationUIクラスのインスタンスを作り、インスタンス変数uiに代入する
 		    }
 				
 			/**
-			 * インスタンス変数に保持したオブジェクトのメソッドを使い、肥満度判定の処理を行う
+			 * インスタンス変数に保持したオブジェクトのメソッドを使い、卒業研究着手判定の処理を行う
 		     */
 			private void doCheak()
 		    {
@@ -44,7 +44,7 @@
 		      p.setJudge(judgeGraduation());
 		      
 		      ui.printNeedCredit(calcNeedSum(),calcNeedBasic(),calcNeedSpeciallty());
-		      //判定結果の表示calcNeedSum(p)
+		      //判定結果の表示
 		      ui.printJudge(p.getJudge());
 		    }
 			
@@ -68,7 +68,7 @@
 			
 		    /**
 		     * 肥満度の判定をする
-		     * @return 肥満度の判定結果
+		     * @return 卒業研究着手可能かの判定結果
 			 */
 		    private String judgeGraduation()
 		    {
