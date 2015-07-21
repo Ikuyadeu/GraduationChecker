@@ -67,36 +67,36 @@ public class Person {
 	}
 
 	/**
-	 * インスタンスの体重の値を設定する
-	 * @param  体重
+	 * インスタンスの基礎科目の値を設定する
+	 * @param  basic 基礎科目
 	 */
 	public void setBasic(int basic){
 		this.basic = basic;
 	}
 	/**
-	 * インスタンスの体重の値を設定する
-	 * @param height 体重
+	 * インスタンスの教養教育科目の単位数の値を設定する
+	 * @param liberal 教養教育科目単位数
 	 */
 	public void setLiberal(int liberal){
 		this.liberal = liberal;
 	}
 	/**
-	 * インスタンスの体重の値を設定する
-	 * @param height 体重
+	 * インスタンスの専門基礎科目単位数の値を設定する
+	 * @param specialltyBasic 専門基礎科目単位数
 	 */
 	public void setSpecialltyBasic(int specialltyBasic){
 		this.specialltyBasic = specialltyBasic;
 	}
 	/**
-	 * インスタンスの体重の値を設定する
-	 * @param height 体重
+	 * インスタンスの専門教育科目単位数の値を設定する
+	 * @param specialltyEducation 専門教育科目単位数
 	 */
 	public void setSpecialltyEducation(int specialltyEducation){
 		this.specialltyEducation = specialltyEducation;
 	}
 	/**
-	 * インスタンスの体重の値を設定する
-	 * @param height 体重
+	 * インスタンスの専門必修科目の単位数の値を設定する
+	 * @param compulsory　専門必修科目単位数
 	 */
 	public void setCompulsory(int compulsory){
 		this.compulsory = compulsory;

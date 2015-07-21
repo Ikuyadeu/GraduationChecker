@@ -5,7 +5,7 @@ import java.io.*;//パッケージのクラスを使うことを宣言する
  */
 
 public class GraduationUI {
-	/*
+	/**
 	 * 標準入力からint型のデータを得る。入力がなかったり、数値として正しい値でなかった場合は0.0Fを返す
 	 * @param str 何を入力するかを示すメッセージ
 	 * @return int型の実数
@@ -38,24 +38,25 @@ public class GraduationUI {
 		return f;
 	}
 
-	/*
+	/**
 	 * 必要単位数を画面に表示する
 	 * @param sum 必要合計単位数
-	 * @param basic
-	 * @param Speciallty
+	 * @param basic 必要基礎科目、教養育成科目及び専門基礎科目
+	 * @param speciallty 必要専門教育科目　専門必修
 	 */
-	public void printNeedCredit(int sum,int basic,int Speciallty) {
+	public void printNeedCredit(int sum,int basic,int speciallty) {
 		System.out.println("必要合計単位数は" + sum + "単位");
 		System.out.println("基礎科目、教養育成科目及び専門基礎科目は"+ basic +"単位");
-		System.out.println("専門教育科目　専門必修は"+ basic +"単位");
+		System.out.println("専門教育科目　専門必修は"+ speciallty +"単位");
 	}
 
-	/*
+	/**
 	 * 研究着手可能判定を画面に表示する
 	 * @param j 判定結果
 	 */
 	public void printJudge(String j) {
-		System.out.println(j + "です");
+		System.out.println("計算結果：");
+		System.out.println(j);
 	}
 
 }
