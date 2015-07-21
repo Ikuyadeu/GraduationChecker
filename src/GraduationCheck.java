@@ -1,3 +1,6 @@
+/**
+ * 各インスタンスを呼び出すメインのクラス
+ */
 public class GraduationCheck {
 	// インスタンス変数
 	private Person p;

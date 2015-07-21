@@ -1,3 +1,6 @@
+/**
+ * 工学コースでの判定方法を実装したクラス
+ */
 public class CalcScienceCource extends CalcGraduation {
 
 	@Override
@@ -43,17 +46,39 @@ public class CalcScienceCource extends CalcGraduation {
 		return judge;
 	}
 
+	/**
+	 * 合計単位数を計算して返す
+	 * 
+	 * @param p
+	 *            個人の単位数状況
+	 * @return 合計単位数
+	 */
 	private int calcCreditSum(Person p) {
 		return p.getBasic() + p.getLiberal() + p.getCompulsory()
 				+ p.getSpecialltyBasic() + p.getSpecialltyEducation();
 	}
 
+	/**
+	 * 基礎科目、教養育成科目及び専門基礎科目単位数を計算して返す
+	 * 
+	 * @param p
+	 *            個人の単位数状況
+	 * @return 基礎科目、教養育成科目及び専門基礎科目単位数
+	 */
 	private int calcCreditBasic(Person p) {
 		return p.getBasic() + p.getLiberal() + p.getSpecialltyBasic();
 	}
 
+	/**
+	 * 基礎科目、教養育成科目及び専門基礎科目単位数を計算して返す
+	 * 
+	 * @param p
+	 *            個人の単位数状況
+	 * @return 基礎科目、教養育成科目及び専門基礎科目単位数
+	 */
 	private int calcCreditSpecilallty(Person p) {
 		return p.getSpecialltyBasic() + p.getSpecialltyEducation();
 	}
+
 
 }

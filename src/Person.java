@@ -1,18 +1,18 @@
 /**
- * 入力データである体重と身長、計算結果である標準体重と判定結果を保持するクラス
+ * 入力データである単位数、計算結果である卒業研究着手可能判定結果を保持するクラス
  */
 public class Person {
 
 	// インスタンス変数
-	/* 基礎科目 */
+	/** 基礎科目単位数 */
 	private int basic;
-	/* 教養教育 */
+	/** 教養教育単位数 */
 	private int liberal;
-	/* 専門基礎 */
+	/** 専門基礎単位数 */
 	private int specialltyBasic;
-	/* 専門教育 */
+	/** 専門教育単位数 */
 	private int specialltyEducation;
-	/* 専門必修 */
+	/** 専門必修単位数 */
 	private int compulsory;
 
 	/**
@@ -125,10 +125,10 @@ public class Person {
 	}
 
 	/**
-	 * インスタンスの肥満度判定の結果を設定する
+	 * インスタンスの卒業研究着可能か判定の結果を設定する
 	 * 
 	 * @param judge
-	 *            肥満度判定の結果
+	 *           卒業研究着可能かの判定の結果
 	 */
 	public void setJudge(String judge) {
 		this.judge = judge;

@@ -1,3 +1,6 @@
+/**
+ * システムコースでの判定方法を実装したクラス
+ */
 public class CalcSystemCource extends CalcGraduation {
 
 	@Override

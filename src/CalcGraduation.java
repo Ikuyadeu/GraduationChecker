@@ -1,3 +1,6 @@
+/**
+ *必要な単位数や卒業研究着手可能かを調べて返す抽象クラス
+ */
 public abstract class CalcGraduation {
 	/**
 	 * 各コースの必要合計単位数を返す
@@ -21,7 +24,7 @@ public abstract class CalcGraduation {
 	abstract int calcNeedSpeciallty();// 必要専門教育・専門必修科目数を返す
 
 	/**
-	 * 卒業研究着手可能かの判定を帰す
+	 * 卒業研究着手可能かの判定を返す
 	 * 
 	 * @param p
 	 *            個人の単位数情報
