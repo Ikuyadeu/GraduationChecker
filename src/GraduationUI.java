@@ -40,10 +40,14 @@ public class GraduationUI {
 
 	/*
 	 * 必要単位数を画面に表示する
-	 * @param w 単位数
+	 * @param sum 必要合計単位数
+	 * @param basic
+	 * @param Speciallty
 	 */
 	public void printNeedCredit(int sum,int basic,int Speciallty) {
 		System.out.println("必要合計単位数は" + sum + "単位");
+		System.out.println("基礎科目、教養育成科目及び専門基礎科目は"+ basic +"単位");
+		System.out.println("専門教育科目　専門必修は"+ basic +"単位");
 	}
 
 	/*

@@ -68,7 +68,7 @@ public class Person {
 
 	/**
 	 * インスタンスの体重の値を設定する
-	 * @param height 体重
+	 * @param  体重
 	 */
 	public void setBasic(int basic){
 		this.basic = basic;
