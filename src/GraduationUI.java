@@ -50,10 +50,12 @@ public class GraduationUI {
 	 * @param speciallty
 	 *            必要専門教育科目　専門必修
 	 */
-	public void printNeedCredit(int sum, int basic, int speciallty) {
-		System.out.println("必要合計単位数は" + sum + "単位");
-		System.out.println("基礎科目、教養育成科目及び専門基礎科目は" + basic + "単位");
-		System.out.println("専門教育科目　専門必修は" + speciallty + "単位");
+	public String getNeedCredit(int sum, int basic, int speciallty) {
+		String result;
+		result = "<html>必要合計単位数は" + sum + "単位<br>";
+		result += "基礎科目、教養育成科目及び専門基礎科目は" + basic + "単位<br>";
+		result += "専門教育科目　専門必修は" + speciallty + "単位<br><br>";
+		return result;
 	}
 
 	/**
@@ -62,9 +64,11 @@ public class GraduationUI {
 	 * @param j
 	 *            判定結果
 	 */
-	public void printJudge(String j) {
-		System.out.println("計算結果：");
-		System.out.println(j);
+	public String getJudge(String j) {
+		String result;
+		result = "計算結果：<br>";
+		result += j + "<br></html>";
+		return result;
 	}
 
 }
