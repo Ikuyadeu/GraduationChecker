@@ -41,7 +41,7 @@ public class GraduationChecker extends JFrame {
 		String[] creditName = { "基礎科目", "教養育成", "専門基礎", "専門教育", "専門必修", "選択科目" };
 		creditNum = new JTextField[6];
 
-		title.setFont(new Font("TakaoGothic",Font.PLAIN,20));
+		title.setFont(new Font("TakaoGothic",Font.PLAIN,15));
 		title.setHorizontalAlignment(JLabel.CENTER);
 		
 		
@@ -73,7 +73,7 @@ public class GraduationChecker extends JFrame {
 
 		addWindowListener(new GraduationWindowListener());
 
-		setBounds(100, 200, 800, 400);
+		setBounds(550, 300, 600, 500);
 		setVisible(true);
 	}
 
