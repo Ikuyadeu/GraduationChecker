@@ -67,6 +67,7 @@ public class Person {
 
 	/**
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 * インスタンスの体重の値を設定する
 	 * @param  体重
 =======
@@ -74,6 +75,11 @@ public class Person {
 	 * 
 	 * @return 着手判定の結果
 >>>>>>> refs/heads/last
+=======
+	 * 卒業研究着手判定の結果を得る
+	 * 
+	 * @return 着手判定の結果
+>>>>>>> refs/heads/new
 	 */
 	public String getJudge() {
 		return this.judge;

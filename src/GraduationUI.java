@@ -41,6 +41,16 @@ public class GraduationUI {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * 必要単位数を画面に表示する
+	 * 
+	 * @param sum
+	 *            必要合計単位数
+	 * @param basic
+	 *            必要基礎科目、教養育成科目及び専門基礎科目
+	 * @param speciallty
+	 *            必要専門教育科目　専門必修
+=======
 	 * 必要単位数を画面に表示する
 	 * 
 	 * @param sum

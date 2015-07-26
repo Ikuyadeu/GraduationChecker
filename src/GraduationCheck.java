@@ -1,4 +1,3 @@
-
 /**
  * 各インスタンスを呼び出すメインのクラス
  */
@@ -18,7 +17,6 @@ public class GraduationCheck {
 	void doInit(String method) {
 		p = new Person(); // Personクラスのインスタンスを作り、インスタンス変数pに代入する
 
-
 		// 計算方法に応じたクラスのインスタンスを作り、インスタンス変数calcに代入する
 		try {
 			calc = (CalcGraduation) Class.forName("Calc" + method +"Cource")
@@ -28,7 +26,6 @@ public class GraduationCheck {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
 
 		ui = new GraduationUI(); // GraduationUIクラスのインスタンスを作り、インスタンス変数uiに代入する
 	}

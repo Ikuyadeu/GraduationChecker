@@ -22,6 +22,7 @@ public class CalcSystemCource extends CalcGraduation {
 	String judgeGraduation(Person p) {
 		String judge;
 
+
 		if (calcCreditSum(p) < calcNeedSum()) {
 			judge = "合計単位が" + (calcNeedSum() - calcCreditSum(p)) + "単位足りません。<br>";
 		} else {
