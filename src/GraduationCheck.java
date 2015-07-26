@@ -6,6 +6,7 @@ public class GraduationCheck {
 	private Person p;
 	private CalcGraduation calc;
 	private GraduationUI ui;
+	private String result;
 
 	/**
 	 * 実際の仕事を担う3つのクラスのインスタンスを作り、変数を代入する
@@ -13,12 +14,12 @@ public class GraduationCheck {
 	 * @param method
 	 *            　必要単位の計算方法の名称
 	 */
-	private void doInit(String method) {
+	void doInit(String method) {
 		p = new Person(); // Personクラスのインスタンスを作り、インスタンス変数pに代入する
 
 		// 計算方法に応じたクラスのインスタンスを作り、インスタンス変数calcに代入する
 		try {
-			calc = (CalcGraduation) Class.forName("Calc" + method)
+			calc = (CalcGraduation) Class.forName("Calc" + method +"Cource")
 					.newInstance();
 		}
 		// 例外を表示する
@@ -32,20 +33,20 @@ public class GraduationCheck {
 	/**
 	 * インスタンス変数に保持したオブジェクトのメソッドを使い、卒業研究着手判定の処理を行う
 	 */
-	private void doCheak() {
+	void doCheak(int[] credit) {
 		// データ入力
-		p.setBasic(ui.getValue("基礎科目の単位を入力してください: "));
-		p.setLiberal(ui.getValue("教養教育の単位を入力してください: "));
-		p.setSpecialltyBasic(ui.getValue("専門基礎の単位を入力してください: "));
-		p.setSpecialltyEducation(ui.getValue("専門教育の単位を入力してください: "));
-		p.setCompulsory(ui.getValue("専門必修の単位を入力してください: "));
+		p.setBasic(credit[0]);
+		p.setLiberal(credit[1]);
+		p.setSpecialltyBasic(credit[2]);
+		p.setSpecialltyEducation(credit[3]);
+		p.setCompulsory(credit[4]);
 
 		// 卒業研究着手可能かの判定と設定
 		p.setJudge(judgeGraduation());
 
-		ui.printNeedCredit(calcNeedSum(), calcNeedBasic(), calcNeedSpeciallty());
+		result = ui.getNeedCredit(calcNeedSum(), calcNeedBasic(), calcNeedSpeciallty());
 		// 判定結果の表示
-		ui.printJudge(p.getJudge());
+		result += ui.getJudge(p.getJudge());
 	}
 
 	/**
@@ -74,21 +75,7 @@ public class GraduationCheck {
 		return calc.judgeGraduation(p);
 	}
 
-	/**
-	 * アプリケーションを起動すると実行される。 実行方法: java GraduationCheck SystemCource または java
-	 * GraduationCheck ScienceCource
-	 * 
-	 * @param args
-	 *            起動時に文字列の配列として渡される引数。計算方法（システムコースまたは工学コース）を指定する。
-	 */
-	public static void main(String args[]) {
-		// コンストラクタを呼び出し、自分自身のインスタンスを作る
-		GraduationCheck check = new GraduationCheck();
-
-		// 必要単位の判定をパラメタから受け取り、初期化する
-		check.doInit(args[0]);
-
-		// 単位数をチェックする
-		check.doCheak();
+	String getResult(){
+		return result;
 	}
 }

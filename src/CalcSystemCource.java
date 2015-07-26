@@ -23,24 +23,24 @@ public class CalcSystemCource extends CalcGraduation {
 		String judge;
 
 		if (calcCreditSum(p) < calcNeedSum()) {
-			judge = "合計単位が" + (calcNeedSum() - calcCreditSum(p)) + "単位足りません。\n";
+			judge = "合計単位が" + (calcNeedSum() - calcCreditSum(p)) + "単位足りません。<br>";
 		} else {
 			judge = "";
 		}
 
-		if (calcCreditSum(p) < calcNeedSum()) {
+		if (calcCreditBasic(p) < calcNeedBasic()) {
 			judge += "基礎科目、教養育成科目及び専門基礎科目が"
-					+ (calcNeedBasic() - calcCreditBasic(p)) + "単位足りません。\n";
+					+ (calcNeedBasic() - calcCreditBasic(p)) + "単位足りません。<br>";
 		}
 
-		if (calcCreditSum(p) < calcNeedSum()) {
+		if (calcCreditSpecilallty(p) < calcNeedSpeciallty()) {
 			judge += "専門教育科目　専門必修（コース別）欄の科目が"
 					+ (calcNeedSpeciallty() - calcCreditSpecilallty(p))
-					+ "単位足りません。\n";
+					+ "単位足りません。<br>";
 		}
 
 		if ("".equals(judge)) {
-			judge = "卒業研究に着手できます。";
+			judge = "卒業研究に着手できます。<br>";
 		}
 
 		return judge;
