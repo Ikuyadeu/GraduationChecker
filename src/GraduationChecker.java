@@ -14,7 +14,7 @@ public class GraduationChecker extends JFrame {
 	private JTextField[] creditNum;
 
 	/**
-	 * アプリケーションを起動すると実行される。 実行方法: java GraduationCheck
+	 * アプリケーションを起動すると実行される。 実行方法: java GraduationChecker
 	 * 
 	 * @param args
 	 *            起動時に文字列の配列として渡される引数。計算方法（システムコースまたは工学コース）を指定する。
