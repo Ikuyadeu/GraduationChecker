@@ -40,6 +40,7 @@ public class GraduationCheck {
 		p.setSpecialltyBasic(credit[2]);
 		p.setSpecialltyEducation(credit[3]);
 		p.setCompulsory(credit[4]);
+		p.setElective(credit[5]);
 
 		// ‘²‹ÆŒ¤‹†’…è‰Â”\‚©‚Ì”»’è‚Æİ’è
 		p.setJudge(judgeGraduation());
