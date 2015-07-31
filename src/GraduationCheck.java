@@ -42,13 +42,15 @@ public class GraduationCheck {
 		p.setCompulsory(credit[4]);
 		p.setElective(credit[5]);
 
-		// 卒業研究着手可能かの判定と設定
+		// 卒業研究着手可能かの判定を設定
 		p.setJudge(judgeGraduation());
-		//判定結果に必要単位数を設定
+		// 判定結果に必要単位数を設定
 		result = ui.getNeedCredit(calcNeedSum(), calcNeedBasic(),
 				calcNeedSpeciallty(), calc.calcNeedElective());
 		// 判定結果に計算の結果を加える
-		result += ui.getJudge(p.getJudge());
+		result += ui.makeJudge(p.getJudge(), calc.judgeSum(p),
+				calc.judgeBasic(p), calc.judgeSpeciallty(p),
+				calc.judgeElective(p));
 	}
 
 	/**
@@ -83,7 +85,7 @@ public class GraduationCheck {
 	 * 
 	 * @return 卒業研究着手可能かの判定結果
 	 */
-	private String judgeGraduation() {
+	private boolean judgeGraduation() {
 		return calc.judgeGraduation(p);
 	}
 

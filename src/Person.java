@@ -3,7 +3,6 @@
  */
 public class Person {
 
-	// インスタンス変数
 	/** 基礎科目単位数 */
 	private int basic;
 	/** 教養教育単位数 */
@@ -18,7 +17,7 @@ public class Person {
 	private int elective;
 
 	/** 判定 */
-	private String judge;
+	private boolean judge;
 
 	/**
 	 * 基礎科目の単位数を得る
@@ -79,7 +78,7 @@ public class Person {
 	 * 
 	 * @return 着手判定の結果
 	 */
-	public String getJudge() {
+	public boolean getJudge() {
 		return this.judge;
 	}
 
@@ -149,7 +148,7 @@ public class Person {
 	 * @param judge
 	 *            卒業研究着可能かの判定の結果
 	 */
-	public void setJudge(String judge) {
+	public void setJudge(boolean judge) {
 		this.judge = judge;
 	}
 
