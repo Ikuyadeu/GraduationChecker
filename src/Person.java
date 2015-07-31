@@ -14,6 +14,8 @@ public class Person {
 	private int specialltyEducation;
 	/** 専門必修単位数 */
 	private int compulsory;
+	/**選択科目単位数*/
+	private int elective;
 
 	/**
 	 * 判定
@@ -63,6 +65,15 @@ public class Person {
 	 */
 	public int getCompulsory() {
 		return this.compulsory;
+	}
+	
+	/**
+	 * 専門必修科目の単位数を得る
+	 * 
+	 * @return 単位数
+	 */
+	public int getElective() {
+		return this.elective;
 	}
 
 	/**
@@ -122,6 +133,16 @@ public class Person {
 	 */
 	public void setCompulsory(int compulsory) {
 		this.compulsory = compulsory;
+	}
+	
+	/**
+	 * インスタンスの選択科目の単位数の値を設定する
+	 * 
+	 * @param elective
+	 *            　選択科目単位数
+	 */
+	public void setElective(int elective) {
+		this.elective = elective;
 	}
 
 	/**

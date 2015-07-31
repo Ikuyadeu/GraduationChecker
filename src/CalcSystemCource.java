@@ -55,7 +55,7 @@ public class CalcSystemCource extends CalcGraduation {
 	 */
 	private int calcCreditSum(Person p) {
 		return p.getBasic() + p.getLiberal() + p.getCompulsory()
-				+ p.getSpecialltyBasic() + p.getSpecialltyEducation();
+				+ p.getSpecialltyBasic() + p.getSpecialltyEducation() + p.getElective();
 	}
 
 	/**
