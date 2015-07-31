@@ -3,7 +3,6 @@
  */
 public class Person {
 
-	// インスタンス変数
 	/** 基礎科目単位数 */
 	private int basic;
 	/** 教養教育単位数 */
@@ -14,11 +13,11 @@ public class Person {
 	private int specialltyEducation;
 	/** 専門必修単位数 */
 	private int compulsory;
+	/** 選択科目単位数 */
+	private int elective;
 
-	/**
-	 * 判定
-	 */
-	private String judge;
+	/** 判定 */
+	private boolean judge;
 
 	/**
 	 * 基礎科目の単位数を得る
@@ -66,22 +65,20 @@ public class Person {
 	}
 
 	/**
-<<<<<<< HEAD
-<<<<<<< HEAD
-	 * インスタンスの体重の値を設定する
-	 * @param  体重
-=======
-	 * 卒業研究着手判定の結果を得る
+	 * 専門必修科目の単位数を得る
 	 * 
-	 * @return 着手判定の結果
->>>>>>> refs/heads/last
-=======
-	 * 卒業研究着手判定の結果を得る
-	 * 
-	 * @return 着手判定の結果
->>>>>>> refs/heads/new
+	 * @return 単位数
 	 */
-	public String getJudge() {
+	public int getElective() {
+		return this.elective;
+	}
+
+	/**
+	 * 卒業研究着手判定の結果を得る
+	 * 
+	 * @return 着手判定の結果
+	 */
+	public boolean getJudge() {
 		return this.judge;
 	}
 
@@ -136,12 +133,22 @@ public class Person {
 	}
 
 	/**
+	 * インスタンスの選択科目の単位数の値を設定する
+	 * 
+	 * @param elective
+	 *            　選択科目単位数
+	 */
+	public void setElective(int elective) {
+		this.elective = elective;
+	}
+
+	/**
 	 * インスタンスの卒業研究着可能か判定の結果を設定する
 	 * 
 	 * @param judge
-	 *           卒業研究着可能かの判定の結果
+	 *            卒業研究着可能かの判定の結果
 	 */
-	public void setJudge(String judge) {
+	public void setJudge(boolean judge) {
 		this.judge = judge;
 	}
 
