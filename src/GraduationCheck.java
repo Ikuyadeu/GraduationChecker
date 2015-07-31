@@ -19,7 +19,7 @@ public class GraduationCheck {
 
 		// 計算方法に応じたクラスのインスタンスを作り、インスタンス変数calcに代入する
 		try {
-			calc = (CalcGraduation) Class.forName("Calc" + method +"Cource")
+			calc = (CalcGraduation) Class.forName("Calc" + method + "Cource")
 					.newInstance();
 		}
 		// 例外を表示する
@@ -34,7 +34,7 @@ public class GraduationCheck {
 	 * インスタンス変数に保持したオブジェクトのメソッドを使い、卒業研究着手判定の処理を行う
 	 */
 	void doCheak(int[] credit) {
-		// データ入力
+		// データ設定
 		p.setBasic(credit[0]);
 		p.setLiberal(credit[1]);
 		p.setSpecialltyBasic(credit[2]);
@@ -44,25 +44,36 @@ public class GraduationCheck {
 
 		// 卒業研究着手可能かの判定と設定
 		p.setJudge(judgeGraduation());
-
-		result = ui.getNeedCredit(calcNeedSum(), calcNeedBasic(), calcNeedSpeciallty());
-		// 判定結果の表示
+		//判定結果に必要単位数を設定
+		result = ui.getNeedCredit(calcNeedSum(), calcNeedBasic(),
+				calcNeedSpeciallty(), calc.calcNeedElective());
+		// 判定結果に計算の結果を加える
 		result += ui.getJudge(p.getJudge());
 	}
 
 	/**
-	 * 必要単位の計算を行う
+	 * 必要合計単位の計算を行う
 	 * 
-	 * @return 必要単位数
+	 * @return 必要合計単位数
 	 */
 	private int calcNeedSum() {
 		return calc.calcNeedSum();
 	}
 
+	/**
+	 * 必要基礎・教養育成・専門基礎科目単位数を返す
+	 * 
+	 * @return　必要基礎・教養育成・専門基礎科目単位数
+	 */
 	private int calcNeedBasic() {
 		return calc.calcNeedBasic();
 	}
 
+	/**
+	 * 必要専門教育・専門必修科目単位数を返す
+	 * 
+	 * @return　必要専門教育・専門必修科目単位数
+	 */
 	private int calcNeedSpeciallty() {
 		return calc.calcNeedSpeciallty();
 	}
@@ -76,7 +87,12 @@ public class GraduationCheck {
 		return calc.judgeGraduation(p);
 	}
 
-	String getResult(){
+	/**
+	 * 判定結果を返す。
+	 * 
+	 * @return 判定結果
+	 */
+	String getResult() {
 		return result;
 	}
 }

@@ -17,8 +17,9 @@ public class CalcScienceCource extends CalcGraduation {
 	int calcNeedSpeciallty() {
 		return 12;
 	}
-	
-	int calcNeedElective(){
+
+	@Override
+	int calcNeedElective() {
 		return 9;
 	}
 
@@ -27,7 +28,8 @@ public class CalcScienceCource extends CalcGraduation {
 		String judge;
 
 		if (calcCreditSum(p) < calcNeedSum()) {
-			judge = "合計単位が" + (calcNeedSum() - calcCreditSum(p)) + "単位足りません。<br>";
+			judge = "合計単位が" + (calcNeedSum() - calcCreditSum(p))
+					+ "単位足りません。<br>";
 		} else {
 			judge = "";
 		}
@@ -42,10 +44,9 @@ public class CalcScienceCource extends CalcGraduation {
 					+ (calcNeedSpeciallty() - calcCreditSpecilallty(p))
 					+ "単位足りません。<br>";
 		}
-		
+
 		if (p.getElective() < calcNeedElective()) {
-			judge += "選択科目科目が"
-					+ (calcNeedElective() - p.getElective())
+			judge += "選択科目科目が" + (calcNeedElective() - p.getElective())
 					+ "単位足りません。<br>";
 		}
 
@@ -65,7 +66,8 @@ public class CalcScienceCource extends CalcGraduation {
 	 */
 	private int calcCreditSum(Person p) {
 		return p.getBasic() + p.getLiberal() + p.getCompulsory()
-				+ p.getSpecialltyBasic() + p.getSpecialltyEducation() + p.getElective();
+				+ p.getSpecialltyBasic() + p.getSpecialltyEducation()
+				+ p.getElective();
 	}
 
 	/**
@@ -89,6 +91,5 @@ public class CalcScienceCource extends CalcGraduation {
 	private int calcCreditSpecilallty(Person p) {
 		return p.getSpecialltyBasic() + p.getSpecialltyEducation();
 	}
-
 
 }

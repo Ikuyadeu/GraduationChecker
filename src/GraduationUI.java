@@ -13,11 +13,14 @@ public class GraduationUI {
 	 * @param speciallty
 	 *            必要専門教育科目　専門必修
 	 */
-	public String getNeedCredit(int sum, int basic, int speciallty) {
+	public String getNeedCredit(int sum, int basic, int speciallty, int elective) {
 		String result;
 		result = "<html>必要合計単位数は" + sum + "単位<br>";
 		result += "基礎科目、教養育成科目及び専門基礎科目は" + basic + "単位<br>";
-		result += "専門教育科目　専門必修は" + speciallty + "単位<br><br>";
+		result += "専門教育科目　専門必修は" + speciallty + "単位<br>";
+		if (elective != 0)
+			result += "選択科目は" + speciallty + "単位<br>";
+		result += "<br>";
 		return result;
 	}
 
