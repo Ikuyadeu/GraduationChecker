@@ -24,6 +24,7 @@ public class CalcScienceCourceTest extends TestCase{
 		p.setLiberal(100);
 		p.setSpecialltyBasic(100);
 		p.setSpecialltyEducation(100);
+		p.setElective(100);
 	}
 	
 	/**Personを単位をとれてない状態に設定する*/
@@ -34,31 +35,50 @@ public class CalcScienceCourceTest extends TestCase{
 		p.setSpecialltyBasic(0);
 		p.setSpecialltyEducation(0);
 	}
-	
-	@Test
-	public void testCalcNeedSum() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),100);
-	}
-
-	@Test
-	public void testCalcNeedBasic() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),44);
-	}
-
-	@Test
-	public void testCalcNeedSpeciallty() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),12);
-	}
 
 	@Test
 	public void testJudgeGraduation1() {
 		makeCalc();
 		makePerson();
-		setPerfectPerson();
-		
+		setBadPerson();
+		assertFalse(calc.judgeGraduation(p));
 	}
+
+	@Test
+	public void testJudgeGraduation2() {
+		makeCalc();
+		makePerson();
+		setBadPerson();
+		p.setElective(100);
+		assertFalse(calc.judgeGraduation(p));
+	}
+	
+	@Test
+	public void testJudgeGraduation3() {
+		makeCalc();
+		makePerson();
+		setBadPerson();
+		p.setBasic(100);
+		assertFalse(calc.judgeGraduation(p));
+	}
+	
+	@Test
+	public void testJudgeGraduation4() {
+		makeCalc();
+		makePerson();
+		setBadPerson();
+		p.setBasic(100);
+		p.setSpecialltyBasic(100);
+		assertFalse(calc.judgeGraduation(p));
+	}
+	
+	@Test
+	public void testJudgeGraduation5() {
+		makeCalc();
+		makePerson();
+		setPerfectPerson();
+		assertTrue(calc.judgeGraduation(p));
+	}
+	
 
 }
