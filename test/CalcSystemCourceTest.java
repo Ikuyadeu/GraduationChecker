@@ -34,32 +34,38 @@ public class CalcSystemCourceTest extends TestCase{
 		p.setSpecialltyBasic(0);
 		p.setSpecialltyEducation(0);
 	}
-	
-	@Test
-	public void testCalcNeedSum() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),100);
-	}
-
-	@Test
-	public void testCalcNeedBasic() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),44);
-	}
-
-	@Test
-	public void testCalcNeedSpeciallty() {
-		makeCalc();
-		assertEquals(calc.calcNeedSum(),12);
-	}
 
 	@Test
 	public void testJudgeGraduation1() {
 		makeCalc();
 		makePerson();
-		setPerfectPerson();
-		
+		setBadPerson();
+		assertFalse(calc.judgeGraduation(p));
 	}
 
-
+	@Test
+	public void testJudgeGraduation2() {
+		makeCalc();
+		makePerson();
+		setBadPerson();
+		p.setElective(100);
+		assertFalse(calc.judgeGraduation(p));
+	}
+	
+	@Test
+	public void testJudgeGraduation3() {
+		makeCalc();
+		makePerson();
+		setBadPerson();
+		p.setBasic(100);
+		assertFalse(calc.judgeGraduation(p));
+	}
+	
+	@Test
+	public void testJudgeGraduation4() {
+		makeCalc();
+		makePerson();
+		setPerfectPerson();
+		assertTrue(calc.judgeGraduation(p));
+	}
 }
