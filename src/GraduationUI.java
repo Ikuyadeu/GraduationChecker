@@ -33,9 +33,9 @@ public class GraduationUI {
 	 * @param basic
 	 *            基礎科目、教養育成科目および専門基礎科目の必要分との差
 	 * @param specially
-	 *            //専門教育、専門必修の必要分との差
+	 *            専門教育、専門必修の必要分との差
 	 * @param elective
-	 *            //選択科目の必要分との差
+	 *            選択科目の必要分との差
 	 * @return　判定結果の文字列
 	 */
 	public String makeJudge(boolean j, int sum, int basic, int specially,
