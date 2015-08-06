@@ -8,6 +8,8 @@ import javax.swing.*;
  * 実際に入出力をされるものを管理する役割のクラス
  */
 public class GraduationChecker extends JFrame {
+	/** デフォルトシリアルバージョンID */
+	private static final long serialVersionUID = 1L;
 	/** 入力フォームのフォーマット */
 	private NumberFormat nf = NumberFormat.getNumberInstance();
 	/** 中心で出力される文字列 */
