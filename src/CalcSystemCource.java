@@ -22,11 +22,6 @@ public class CalcSystemCource extends CalcGraduation {
 	int calcNeedElective() {
 		return 0;
 	}
-
-	@Override
-	int judgeElective(Person p) {
-		return 0;
-	}
 	
 	@Override
 	boolean judgeGraduation(Person p) {
