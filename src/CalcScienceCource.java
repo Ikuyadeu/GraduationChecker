@@ -22,26 +22,6 @@ public class CalcScienceCource extends CalcGraduation {
 	int calcNeedElective() {
 		return 9;
 	}
-
-	@Override
-	int judgeSum(Person p) {
-		return calcCreditSum(p) - calcNeedSum();
-	}
-
-	@Override
-	int judgeBasic(Person p) {
-		return calcCreditBasic(p) - calcNeedBasic();
-	}
-
-	@Override
-	int judgeSpeciallty(Person p) {
-		return calcCreditSpecilallty(p) - calcNeedSpeciallty();
-	}
-	
-	@Override
-	int judgeElective(Person p) {
-		return p.getElective() - calcNeedElective();
-	}
 	
 	@Override
 	boolean judgeGraduation(Person p) {

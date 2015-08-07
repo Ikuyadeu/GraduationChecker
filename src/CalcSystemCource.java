@@ -24,21 +24,6 @@ public class CalcSystemCource extends CalcGraduation {
 	}
 
 	@Override
-	int judgeSum(Person p) {
-		return calcCreditSum(p) - calcNeedSum();
-	}
-
-	@Override
-	int judgeBasic(Person p) {
-		return calcCreditBasic(p) - calcNeedBasic();
-	}
-
-	@Override
-	int judgeSpeciallty(Person p) {
-		return calcCreditSpecilallty(p) - calcNeedSpeciallty();
-	}
-	
-	@Override
 	int judgeElective(Person p) {
 		return 0;
 	}

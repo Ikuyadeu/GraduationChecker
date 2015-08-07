@@ -29,34 +29,47 @@ public abstract class CalcGraduation {
 	 * @return　必要選択科目単位数
 	 */
 	abstract int calcNeedElective();
+	
 	/**
-	 * 合計単位が足りているかを返す
+	 * 必要合計単位と実際の単位数の差を返す
+	 * 足りていない場合は不の値を返す
 	 * 
 	 * @param p 個人の単位数情報
-	 * @return　判定結果
+	 * @return　単位数の差
 	 */
-	abstract int judgeSum(Person p);
+	int judgeSum(Person p) {
+		return calcCreditSum(p) - calcNeedSum();
+	}
+
 	/**
-	 * 基礎・教養育成・専門基礎科目単位が足りているかを返す
+	 * 必要な基礎・教養育成・専門基礎科目単位と実際の単位数の差を返す
 	 * 
 	 * @param p 個人の単位数情報
-	 * @return　判定結果
+	 * @return　単位数の差
 	 */
-	abstract int judgeBasic(Person p);
+	int judgeBasic(Person p) {
+		return calcCreditBasic(p) - calcNeedBasic();
+	}
+
 	/**
-	 * 専門教育・専門単位が足りているかを返す
+	 * 必要な専門教育・専門単位と実際の単位数の差を返す
 	 * 
 	 * @param p 個人の単位数情報
-	 * @return　判定結果
+	 * @return　単位数の差
 	 */
-	abstract int judgeSpeciallty(Person p);
+	int judgeSpeciallty(Person p) {
+		return calcCreditSpecilallty(p) - calcNeedSpeciallty();
+	}
+	
 	/**
-	 * 選択科目単位が足りているかを返す
+	 * 必要な選択科目単位と実際の単位数の差を返す
 	 * 
 	 * @param p 個人の単位数情報
-	 * @return　判定結果
+	 * @return　単位数の差
 	 */
-	abstract int judgeElective(Person p);
+	int judgeElective(Person p) {
+		return p.getElective() - calcNeedElective();
+	}
 	
 	/**
 	 * 卒業研究着手可能かの判定を返す
