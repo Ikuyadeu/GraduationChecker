@@ -1,7 +1,7 @@
 /**
  * 数値を得て、文字列にまとめた結果を返す役割を担うクラス
  */
-public class GraduationUI {
+public class DataDocumentation {
 	/**
 	 * 必要単位数をあらわす文字列を返す
 	 * 

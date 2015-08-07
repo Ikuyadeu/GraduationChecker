@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * 実際に入出力をされるものを管理する役割のクラス
  */
-public class GraduationChecker extends JFrame {
+public class GraduationCheckUI extends JFrame {
 	/** デフォルトシリアルバージョンID */
 	private static final long serialVersionUID = 1L;
 	/** 入力フォームのフォーマット */
@@ -26,19 +26,19 @@ public class GraduationChecker extends JFrame {
 	private JTextField[] creditNum;
 
 	/**
-	 * アプリケーションを起動すると実行される。 実行方法: java GraduationChecker
+	 * アプリケーションを起動すると実行される。 実行方法: java GraduationCheckUI
 	 * 
 	 * @param args
 	 *            起動時に文字列の配列として渡される引数。計算方法（システムコースまたは工学コース）を指定する。
 	 */
 	public static void main(String[] args) {
-		new GraduationChecker();
+		new GraduationCheckUI();
 	}
 
 	/**
 	 * 見た目を設定する
 	 */
-	public GraduationChecker() {
+	public GraduationCheckUI() {
 		// タイトルの設定
 		super("卒業研究着手チェッカー");
 

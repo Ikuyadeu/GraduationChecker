@@ -5,7 +5,7 @@ public class GraduationCheck {
 	// インスタンス変数
 	private Person p;
 	private CalcGraduation calc;
-	private GraduationUI ui;
+	private DataDocumentation dd;
 	private String result;
 
 	/**
@@ -27,7 +27,7 @@ public class GraduationCheck {
 			e.printStackTrace();
 		}
 
-		ui = new GraduationUI(); // GraduationUIクラスのインスタンスを作り、インスタンス変数uiに代入する
+		dd = new DataDocumentation(); // GraduationUIクラスのインスタンスを作り、インスタンス変数uiに代入する
 	}
 
 	/**
@@ -45,10 +45,10 @@ public class GraduationCheck {
 		// 卒業研究着手可能かの判定を設定
 		p.setJudge(judgeGraduation());
 		// 判定結果に必要単位数を設定
-		result = ui.getNeedCredit(calcNeedSum(), calcNeedBasic(),
+		result = dd.getNeedCredit(calcNeedSum(), calcNeedBasic(),
 				calcNeedSpeciallty(), calc.calcNeedElective());
 		// 判定結果に計算の結果を加える
-		result += ui.makeJudge(p.getJudge(), calc.judgeSum(p),
+		result += dd.makeJudge(p.getJudge(), calc.judgeSum(p),
 				calc.judgeBasic(p), calc.judgeSpeciallty(p),
 				calc.judgeElective(p));
 	}
