@@ -41,6 +41,9 @@ public class CalcScienceCourceTest extends TestCase{
 		makeCalc();
 		makePerson();
 		setBadPerson();
+		p.setBasic(44);
+		p.setSpecialltyBasic(12);
+		p.setElective(9);
 		assertFalse(calc.judgeGraduation(p));
 	}
 
@@ -50,6 +53,7 @@ public class CalcScienceCourceTest extends TestCase{
 		makePerson();
 		setBadPerson();
 		p.setElective(100);
+		p.setSpecialltyBasic(12);
 		assertFalse(calc.judgeGraduation(p));
 	}
 	
@@ -59,6 +63,7 @@ public class CalcScienceCourceTest extends TestCase{
 		makePerson();
 		setBadPerson();
 		p.setBasic(100);
+		p.setElective(9);
 		assertFalse(calc.judgeGraduation(p));
 	}
 	
